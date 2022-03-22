@@ -27,7 +27,7 @@ public class Main {
 
         try {
             operand2 = Integer.parseInt(expression[2]);
-            if (operand2 < 1 || operand1 > 10);
+            if ( operand2 < 1  ||  operand1 > 10 );
             throw new Exception("Число должно быть в рамках от 1 до 10");
         } catch (NumberFormatException ex) {
             // Если не смогли получить целое число из второго операнда,
