@@ -18,8 +18,9 @@ public class Main {
         // Пробуем привести к арабским числам
         try {
             operand1 = Integer.parseInt(expression[0]);
-            if (operand1 < 1 || operand1 > 10);
-            throw new Exception("Число должно быть в рамках от 1 до 10");
+            if (operand1 < 1 || operand1 > 10) {
+                throw new Exception("Число должно быть в рамках от 1 до 10");
+            }
         } catch (NumberFormatException ex) {
             // Если не смогли получить целое число из 1го операнда,
             // то дальше пробуем получить целое из 2го
@@ -27,8 +28,9 @@ public class Main {
 
         try {
             operand2 = Integer.parseInt(expression[2]);
-            if ( operand2 < 1  ||  operand1 > 10 );
-            throw new Exception("Число должно быть в рамках от 1 до 10");
+            if ( operand2 < 1  ||  operand2 > 10 ) {
+                throw new Exception("Число должно быть в рамках от 1 до 10");
+            }
         } catch (NumberFormatException ex) {
             // Если не смогли получить целое число из второго операнда,
             // то дальше пробуем получить римские
