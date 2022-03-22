@@ -18,6 +18,8 @@ public class Main {
         // Пробуем привести к арабским числам
         try {
             operand1 = Integer.parseInt(expression[0]);
+            if (operand1 < 1 || operand1 > 10);
+            throw new Exception("Число должно быть в рамках от 1 до 10");
         } catch (NumberFormatException ex) {
             // Если не смогли получить целое число из 1го операнда,
             // то дальше пробуем получить целое из 2го
@@ -25,6 +27,8 @@ public class Main {
 
         try {
             operand2 = Integer.parseInt(expression[2]);
+            if (operand2 < 1 || operand1 > 10);
+            throw new Exception("Число должно быть в рамках от 1 до 10");
         } catch (NumberFormatException ex) {
             // Если не смогли получить целое число из второго операнда,
             // то дальше пробуем получить римские
@@ -52,7 +56,7 @@ public class Main {
         String[] expression = skn.nextLine().split("\\s+");
 
         // Проверка на корректность входных данных
-        if (expression.length != 3 || !(expression[1].length() == 1) || !isOperation(expression[1])) {
+        if (expression.length != 3 || !isOperation(expression[1])) {
             throw new Exception("Формат математической операции не удовлетворяет заданию - два операнда и один оператор (+, -, /, *)");
         }
 
